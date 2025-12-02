@@ -1,114 +1,70 @@
 🏢 Full-Stack HR Management System (HRMS)
 
-This project is a comprehensive Human Resource Management System (HRMS) built using the Laravel framework and the Filament PHP UI framework. It is designed to manage core HR operations with dedicated, secure portals for Admins, HR Managers, and Employees.
-
-The HRMS is developed using a Server-Driven UI approach (Filament) on top of the robust TALL stack (Tailwind, Alpine, Livewire, Laravel), allowing for rapid and scalable development of complex administrative interfaces.
+A complete Human Resource Management System built with Laravel and Filament PHP, featuring dedicated and secure portals for Admins, HR Managers, and Employees.
+Designed using a Server-Driven UI architecture powered by the TALL Stack (Tailwind, Alpine.js, Livewire, Laravel) for fast and scalable development.
 
 ✨ Key Features
+1. Multi-Panel Role-Based Access
 
-This application implements a complete set of features necessary for modern HR management, optimized through Filament's declarative design:
+✔ Admin Panel – Manage system settings, roles, permissions, departments, and job positions
+✔ HR Manager Panel – Oversee attendance, leave requests, payroll, and performance reviews
+✔ Employee Panel – Self-service access to attendance logs, leave requests, payslips, and profile info
 
-1. Multi-Panel User Experience
+All panels run inside the same Laravel project using Filament’s multi-panel support.
 
-The system provides tailored experiences based on user roles, all within a single application instance:
+2. Core HR Modules
+Module	Description
+User & Access Control	Role-based permissions powered by Filament Shield
+Organization Structure	Manage departments, positions, and reporting hierarchy
+Leave Management	Submit, approve, reject, and track leave requests
+Attendance Tracking	Check-in/out system with daily hour calculations
+Payroll	Automatic salary generation using Laravel Queues & Jobs
+Performance Reviews	Evaluate employee performance with scoring & feedback
+🛠 Technology Stack
 
-Admin Panel: Full control over system settings, user roles, and organization structure.
+Backend: Laravel 12 (PHP)
 
-HR Manager Panel: Tools for managing leave requests, attendance, payroll, and performance reviews.
+UI: Filament PHP v4 (Server-Driven)
 
-Employee Panel: A self-service portal for employees to view payslips, request leave, and track their attendance.
+Frontend: Tailwind CSS, Livewire, Alpine.js (TALL Stack)
 
-2. Core HR Functionality
+Database: MySQL (Eloquent ORM)
 
-Module
-
-Description
-
-User & Access Control
-
-Implemented using a Roles & Permissions plugin (Filament Shield) to ensure secure, role-based access for all panels.
-
-Organization Structure
-
-Management of company departments and job positions.
-
-Leave Management
-
-Comprehensive system for defining leave types, submitting, approving, or rejecting employee leave requests.
-
-Attendance Tracking
-
-Custom check-in and check-out functionality with calculation of daily working hours and logging of tardiness.
-
-Payroll Generation
-
-Automated payroll generation utilizing Laravel Queues & Jobs to ensure efficient background processing for large numbers of employees.
-
-Performance Reviews
-
-Systematically manage and record performance appraisal cycles and goals.
-
-3. Technology Stack
-
-This HRMS leverages modern PHP and frontend technologies for a fast, reactive, and scalable solution:
-
-Backend Framework: Laravel 12 (PHP)
-
-UI Framework: Filament PHP v4 (Server-Driven UI)
-
-Reactive Stack (TALL): Livewire, Alpine.js
-
-Styling: Tailwind CSS
-
-Database: MySQL (via Eloquent ORM)
-
-Background Processing: Laravel Queue & Jobs (used for payroll)
+Background Jobs: Laravel Queues (used for payroll processing)
 
 🚀 Getting Started
-
-To get a copy of this project up and running on your local machine, follow these steps:
-
-Clone the repository:
-
-git clone [Project Repository URL Here]
+Clone the Repository
+git clone [YOUR_REPO_URL]
 cd hrms-filament
 
-
-Install PHP dependencies:
-
+Install Dependencies
 composer install
 
-
-Configure Environment:
-
+Environment Setup
 cp .env.example .env
 php artisan key:generate
 
 
-Update your .env file with your database connection details.
+Update your .env file with your database credentials.
 
-Database Setup:
+Run Migrations & Seeders
+php artisan migrate --seed
 
-php artisan migrate --seed # Creates tables and populates with initial data
-
-
-Run Development Server:
-
+Start Development Server
 php artisan serve
 
 
-Access the application in your browser (usually at http://127.0.0.1:8000/).
+Open in browser:
+http://127.0.0.1:8000
 
-🛠 Usage and Access
+🔐 Panels & Access Paths
+Role	URL
+Admin Panel	/admin
+HR Manager Panel	/hr
+Employee Panel	/employee
 
-Admin Panel: Access the primary admin interface at /admin.
-
-HR Manager Panel: Access the HR management interface at /hr.
-
-Employee Panel: Access the employee self-service area at /employee.
-
-(Default login credentials for initial setup will be provided here, e.g., email: admin@example.com, password: password)
+(Default login credentials can be placed here.)
 
 📄 License
 
-This project is open-sourced software licensed under the MIT license.
+This project is open-sourced and available under the MIT License.
