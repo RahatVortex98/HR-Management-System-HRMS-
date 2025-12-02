@@ -3,6 +3,7 @@
 A complete Human Resource Management System built with Laravel and Filament PHP, featuring dedicated and secure portals for Admins, HR Managers, and Employees.
 Designed using a Server-Driven UI architecture powered by the TALL Stack (Tailwind, Alpine.js, Livewire, Laravel) for fast and scalable development.
 
+
 ✨ Key Features
 1. Multi-Panel Role-Based Access
 
