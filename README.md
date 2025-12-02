@@ -7,20 +7,22 @@ Designed using a Server-Driven UI architecture powered by the TALL Stack (Tailwi
 ✨ Key Features
 1. Multi-Panel Role-Based Access
 
-✔ Admin Panel – Manage system settings, roles, permissions, departments, and job positions
-✔ HR Manager Panel – Oversee attendance, leave requests, payroll, and performance reviews
-✔ Employee Panel – Self-service access to attendance logs, leave requests, payslips, and profile info
+        ✔ Admin Panel – Manage system settings, roles, permissions, departments, and job positions
+        ✔ HR Manager Panel – Oversee attendance, leave requests, payroll, and performance reviews
+        ✔ Employee Panel – Self-service access to attendance logs, leave requests, payslips, and profile info
 
 All panels run inside the same Laravel project using Filament’s multi-panel support.
 
 2. Core HR Modules
-Module	Description
-User & Access Control	Role-based permissions powered by Filament Shield
-Organization Structure	Manage departments, positions, and reporting hierarchy
-Leave Management	Submit, approve, reject, and track leave requests
-Attendance Tracking	Check-in/out system with daily hour calculations
-Payroll	Automatic salary generation using Laravel Queues & Jobs
-Performance Reviews	Evaluate employee performance with scoring & feedback
+| Module                     | Description                                             |
+| -------------------------- | ------------------------------------------------------- |
+| **User & Access Control**  | Role-based permissions powered by *Filament Shield*     |
+| **Organization Structure** | Manage departments, positions, and reporting hierarchy  |
+| **Leave Management**       | Submit, approve, reject, and track leave requests       |
+| **Attendance Tracking**    | Check-in/out system with daily hour calculations        |
+| **Payroll**                | Automatic salary generation using Laravel Queues & Jobs |
+| **Performance Reviews**    | Evaluate employee performance with scoring & feedback   |
+
 🛠 Technology Stack
 
 Backend: Laravel 12 (PHP)
@@ -33,15 +35,15 @@ Database: MySQL (Eloquent ORM)
 
 Background Jobs: Laravel Queues (used for payroll processing)
 
-🚀 Getting Started
+🚀 Getting Started:
 Clone the Repository
 git clone [YOUR_REPO_URL]
 cd hrms-filament
 
-Install Dependencies
+Install Dependencies:
 composer install
 
-Environment Setup
+Environment Setup:
 cp .env.example .env
 php artisan key:generate
 
@@ -59,13 +61,14 @@ Open in browser:
 http://127.0.0.1:8000
 
 🔐 Panels & Access Paths
-Role	URL
-Admin Panel	/admin
-HR Manager Panel	/hr
-Employee Panel	/employee
+| Role                 | URL         |
+| -------------------- | ----------- |
+| **Admin Panel**      | `/admin`    |
+| **HR Manager Panel** | `/hr`       |
+| **Employee Panel**   | `/employee` |
 
-(Default login credentials can be placed here.)
 
 📄 License
-
 This project is open-sourced and available under the MIT License.
+
+
