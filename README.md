@@ -26,47 +26,54 @@ All panels run inside the same Laravel project using Filament’s multi-panel su
 
 🛠 Technology Stack
 
-Backend: Laravel 12 (PHP)
-
-UI: Filament PHP v4 (Server-Driven)
-
-Frontend: Tailwind CSS, Livewire, Alpine.js (TALL Stack)
-
-Database: MySQL (Eloquent ORM)
-
-Background Jobs: Laravel Queues (used for payroll processing)
+        Backend: Laravel 12 (PHP)
+        
+        UI: Filament PHP v4 (Server-Driven)
+        
+        Frontend: Tailwind CSS, Livewire, Alpine.js (TALL Stack)
+        
+        Database: MySQL (Eloquent ORM)
+        
+        Background Jobs: Laravel Queues (used for payroll processing)
 
 🚀 Getting Started:
-Clone the Repository
-git clone [YOUR_REPO_URL]
-cd hrms-filament
+
+        Clone the Repository
+        git clone [YOUR_REPO_URL]
+        cd hrms-filament
 
 Install Dependencies:
-composer install
+
+        composer install
 
 Environment Setup:
-cp .env.example .env
-php artisan key:generate
+
+        cp .env.example .env
+        php artisan key:generate
 
 
 Update your .env file with your database credentials.
 
-Run Migrations & Seeders
-php artisan migrate --seed
+Run Migrations & Seeders:
 
-Start Development Server
-php artisan serve
+        php artisan migrate --seed
+
+Start Development Server:
+
+        php artisan serve
 
 
 Open in browser:
-http://127.0.0.1:8000
+
+        http://127.0.0.1:8000
 
 🔐 Panels & Access Paths
-| Role                 | URL         |
-| -------------------- | ----------- |
-| **Admin Panel**      | `/admin`    |
-| **HR Manager Panel** | `/hr`       |
-| **Employee Panel**   | `/employee` |
+
+    | Role                 | URL         |
+    | -------------------- | ----------- |
+    | **Admin Panel**      | `/admin`    |
+    | **HR Manager Panel** | `/hr`       |
+    | **Employee Panel**   | `/employee` |
 
 
 📄 License
