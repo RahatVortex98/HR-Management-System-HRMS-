@@ -14,14 +14,15 @@ Designed using a Server-Driven UI architecture powered by the TALL Stack (Tailwi
 All panels run inside the same Laravel project using Filament’s multi-panel support.
 
 2. Core HR Modules
-| Module                     | Description                                             |
-| -------------------------- | ------------------------------------------------------- |
-| **User & Access Control**  | Role-based permissions powered by *Filament Shield*     |
-| **Organization Structure** | Manage departments, positions, and reporting hierarchy  |
-| **Leave Management**       | Submit, approve, reject, and track leave requests       |
-| **Attendance Tracking**    | Check-in/out system with daily hour calculations        |
-| **Payroll**                | Automatic salary generation using Laravel Queues & Jobs |
-| **Performance Reviews**    | Evaluate employee performance with scoring & feedback   |
+   
+        | Module                     | Description                                             |
+        | -------------------------- | ------------------------------------------------------- |
+        | **User & Access Control**  | Role-based permissions powered by *Filament Shield*     |
+        | **Organization Structure** | Manage departments, positions, and reporting hierarchy  |
+        | **Leave Management**       | Submit, approve, reject, and track leave requests       |
+        | **Attendance Tracking**    | Check-in/out system with daily hour calculations        |
+        | **Payroll**                | Automatic salary generation using Laravel Queues & Jobs |
+        | **Performance Reviews**    | Evaluate employee performance with scoring & feedback   |
 
 🛠 Technology Stack
 
