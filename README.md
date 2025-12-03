@@ -76,6 +76,33 @@ Open in browser:
     | **Admin Panel**      | `/admin`    |
     | **HR Manager Panel** | `/hr`       |
     | **Employee Panel**   | `/employee` |
+    
+Filament Sheild:
+
+#1. Install Package
+    
+    composer require bezhansalleh/filament-shield
+
+#2. Configure Auth Provider
+
+1.Publish the config and set your auth provider model.
+
+    php artisan vendor:publish --tag="filament-shield-config"
+
+2.Add the HasRoles trait to your auth provider model:
+
+    use Spatie\Permission\Traits\HasRoles;
+ 
+    class User extends Authenticatable
+    {
+        use HasRoles;
+    }
+    
+#3. Setup Shield
+
+Run the setup command (it is interactive and smart):
+
+    php artisan shield:setup
 
 
 📄 License
