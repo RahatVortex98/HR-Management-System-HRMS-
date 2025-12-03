@@ -36,6 +36,8 @@ All panels run inside the same Laravel project using Filament’s multi-panel su
         
         Background Jobs: Laravel Queues (used for payroll processing)
 
+        Others: Filament sheild :https://filamentphp.com/plugins/bezhansalleh-shield
+
 🚀 Getting Started:
 
         Clone the Repository
