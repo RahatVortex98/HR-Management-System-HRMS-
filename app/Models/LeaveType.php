@@ -6,5 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class LeaveType extends Model
 {
-    //
+    protected $fillable = [
+        'name',
+        'days_per_year',
+        'is_paid'
+    ];
+    protected $casts = [
+        'is_paid'=>'boolean',
+    ];
+
+    public function leaveRequest(){
+        return $this->hasMany(LeaveRequest::class);
+    }
 }

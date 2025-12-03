@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('description')->nullable();
-            $table->foreignIdFor(App\Models\User::class,'manage_id')->nullable()->constrained();
+            $table->foreignIdFor(App\Models\User::class,'manager_id')->nullable()->constrained();
             $table->timestamps();
         });
     }

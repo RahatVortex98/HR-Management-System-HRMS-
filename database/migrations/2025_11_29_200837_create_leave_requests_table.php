@@ -24,7 +24,7 @@ return new class extends Migration
             $table->integer('days');
             $table->text('reason');
             $table->enum('status',['pending','approved','rejected'])->default('pending');
-            $table->foreignIdFor(User::class,'approved_by')->nullable()->constrained();
+            
             $table->timestamp('approved_at')->nullable();
             $table->text('rejection_reason')->nullable();
             $table->timestamps();
