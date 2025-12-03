@@ -76,9 +76,19 @@ Open in browser:
     | **Admin Panel**      | `/admin`    |
     | **HR Manager Panel** | `/hr`       |
     | **Employee Panel**   | `/employee` |
-    
-Filament Sheild:
 
+
+#Installing the panel builder    
+    
+#Filament Sheild:
+
+    composer require filament/filament:"^4.0"
+
+    php artisan filament:install --panels
+
+    > Open /admin in your web browser, sign in, and start building your app!
+
+    
 #1. Install Package
     
     composer require bezhansalleh/filament-shield
@@ -102,8 +112,11 @@ Filament Sheild:
 
 Run the setup command (it is interactive and smart):
 
-    php artisan shield:setup
+    $php artisan shield:setup
 
+#4. Command for making Super admin:
+
+    $php artisan sheild:super-admin
 
 📄 License
 This project is open-sourced and available under the MIT License.
