@@ -89,7 +89,7 @@ Open in browser:
     > Open /admin in your web browser, sign in, and start building your app!
 
     
-#1. Install Package
+#1. Install Package(filament):
     
     composer require bezhansalleh/filament-shield
 
