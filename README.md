@@ -120,6 +120,10 @@ Run the setup command (it is interactive and smart):
 
 <img width="879" height="278" alt="cap" src="https://github.com/user-attachments/assets/0be0ceb9-d6b0-45c1-b748-b57bd24c9096" />
 
+Login Interface: http://127.0.0.1:8000/admin/login 
+
+<img width="1366" height="651" alt="login interface" src="https://github.com/user-attachments/assets/4e8fe9f0-b4c6-4e61-b1fb-e59f5648b77c" />
+
 📄 License
 This project is open-sourced and available under the MIT License.
 
