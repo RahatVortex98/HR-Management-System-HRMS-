@@ -116,7 +116,7 @@ Run the setup command (it is interactive and smart):
 
 #4. Command for making Super admin:
 
-    $php artisan sheild:super-admin
+    php artisan shield:super-admin
 
 📄 License
 This project is open-sourced and available under the MIT License.
