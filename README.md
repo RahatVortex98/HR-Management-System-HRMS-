@@ -118,7 +118,7 @@ Run the setup command (it is interactive and smart):
 
     php artisan shield:super-admin
 
-    <img width="879" height="278" alt="cap" src="https://github.com/user-attachments/assets/0be0ceb9-d6b0-45c1-b748-b57bd24c9096" />
+<img width="879" height="278" alt="cap" src="https://github.com/user-attachments/assets/0be0ceb9-d6b0-45c1-b748-b57bd24c9096" />
 
 📄 License
 This project is open-sourced and available under the MIT License.
