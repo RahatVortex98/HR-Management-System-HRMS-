@@ -1,4 +1,4 @@
-🏢 Full-Stack HR Management System (HRMS)
+<img width="2397" height="651" alt="view interface" src="https://github.com/user-attachments/assets/792a7201-6c6c-4f6d-a599-17066a1d7a70" />🏢 Full-Stack HR Management System (HRMS)
 
 A complete Human Resource Management System built with Laravel and Filament PHP, featuring dedicated and secure portals for Admins, HR Managers, and Employees.
 Designed using a Server-Driven UI architecture powered by the TALL Stack (Tailwind, Alpine.js, Livewire, Laravel) for fast and scalable development.
@@ -122,11 +122,21 @@ Run the setup command (it is interactive and smart):
 
 Login Interface: http://127.0.0.1:8000/admin/login 
 
+
 <img width="1366" height="651" alt="login interface" src="https://github.com/user-attachments/assets/4e8fe9f0-b4c6-4e61-b1fb-e59f5648b77c" />
 
 Generating Model To The Filament(dashboard):
 
     php artisan make:filament-resource model_name --generate
+
+Created New Employee By Super Admin:
+
+<img width="1366" height="998" alt="New Employee Created By super admin" src="https://github.com/user-attachments/assets/d373e55f-7dbe-493b-8282-a2aca0c487af" />
+
+After Creation:
+
+<img width="2397" height="651" alt="view interface" src="https://github.com/user-attachments/assets/9e89f594-13c9-4043-a56e-5cf94ed4a033" />
+
 
 📄 License
 This project is open-sourced and available under the MIT License.
