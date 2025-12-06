@@ -36,6 +36,8 @@ All panels run inside the same Laravel project using Filament’s multi-panel su
         
         Background Jobs: Laravel Queues (used for payroll processing)
 
+        Others: Filament sheild-> https://filamentphp.com/plugins/bezhansalleh-shield
+
 🚀 Getting Started:
 
         Clone the Repository
@@ -75,6 +77,56 @@ Open in browser:
     | **HR Manager Panel** | `/hr`       |
     | **Employee Panel**   | `/employee` |
 
+
+#Installing the panel builder    
+    
+#Filament Sheild:
+
+    composer require filament/filament:"^4.0"
+
+    php artisan filament:install --panels
+
+    > Open /admin in your web browser, sign in, and start building your app!
+
+    
+#1. Install Package(filament):
+    
+    composer require bezhansalleh/filament-shield
+
+#2. Configure Auth Provider
+
+1.Publish the config and set your auth provider model.
+
+    php artisan vendor:publish --tag="filament-shield-config"
+
+2.Add the HasRoles trait to your auth provider model:
+
+    use Spatie\Permission\Traits\HasRoles;
+ 
+    class User extends Authenticatable
+    {
+        use HasRoles;
+    }
+    
+#3. Setup Shield
+
+Run the setup command (it is interactive and smart):
+
+    $php artisan shield:setup
+
+#4. Command for making Super admin:
+
+    php artisan shield:super-admin
+
+<img width="879" height="278" alt="cap" src="https://github.com/user-attachments/assets/0be0ceb9-d6b0-45c1-b748-b57bd24c9096" />
+
+Login Interface: http://127.0.0.1:8000/admin/login 
+
+<img width="1366" height="651" alt="login interface" src="https://github.com/user-attachments/assets/4e8fe9f0-b4c6-4e61-b1fb-e59f5648b77c" />
+
+Generating Model To The Field:
+
+    php artisan make:filament-resource model_name --generate
 
 📄 License
 This project is open-sourced and available under the MIT License.
