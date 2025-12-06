@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('phone')->nullable();
             $table->date('date_of_birth')->nullable();
             $table->date('hire_date')->nullable();
-            $table->enum('emplopyment_type',['full-time','part-time','contract','intern'])->default('full-time');
+            $table->enum('employment_type',['full-time','part-time','contract','intern'])->default('full-time');
             $table->enum('status',['active','inactive','on-leave','terminated'])->default('active');
             $table->decimal('salary',10,2)->nullable();
             $table->text('address')->nullable();

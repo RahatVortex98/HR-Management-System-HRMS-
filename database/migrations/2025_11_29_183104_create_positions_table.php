@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('positions', function (Blueprint $table) {
             $table->id();
+            $table->string('title'); 
             $table->foreignIdFor(App\Models\Department::class)->constrained()->cascadeOnDelete();
             $table->decimal('min_salary',10,2);
             $table->decimal('max_salary',10,2);
