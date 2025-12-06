@@ -1,4 +1,4 @@
-<img width="2397" height="651" alt="view interface" src="https://github.com/user-attachments/assets/792a7201-6c6c-4f6d-a599-17066a1d7a70" />🏢 Full-Stack HR Management System (HRMS)
+🏢 Full-Stack HR Management System (HRMS)
 
 A complete Human Resource Management System built with Laravel and Filament PHP, featuring dedicated and secure portals for Admins, HR Managers, and Employees.
 Designed using a Server-Driven UI architecture powered by the TALL Stack (Tailwind, Alpine.js, Livewire, Laravel) for fast and scalable development.
