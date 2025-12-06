@@ -124,7 +124,7 @@ Login Interface: http://127.0.0.1:8000/admin/login
 
 <img width="1366" height="651" alt="login interface" src="https://github.com/user-attachments/assets/4e8fe9f0-b4c6-4e61-b1fb-e59f5648b77c" />
 
-Generating Model To The Field:
+Generating Model To The Filament(dashboard):
 
     php artisan make:filament-resource model_name --generate
 
