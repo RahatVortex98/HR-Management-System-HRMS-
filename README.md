@@ -150,6 +150,13 @@ After Creation Positions:
 
 <img width="1366" height="651" alt="Position view" src="https://github.com/user-attachments/assets/6948d440-fb4d-4495-a32a-0d76c7c8af83" />
 
+Leave Type Creation:
+
+<img width="1366" height="651" alt="leave Type Creation" src="https://github.com/user-attachments/assets/741f208f-0d04-4bf4-8c71-f0d703718aaf" />
+
+After Creation Leave Type:
+
+<img width="1366" height="651" alt="leave Type View" src="https://github.com/user-attachments/assets/f8fe0f5c-3ad2-4123-a207-7850a5ae3023" />
 
 📄 License
 This project is open-sourced and available under the MIT License.
