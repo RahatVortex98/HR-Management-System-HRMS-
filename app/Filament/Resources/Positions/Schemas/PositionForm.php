@@ -27,6 +27,7 @@ class PositionForm
                 TextInput::make('max_salary')
                     ->required()
                     ->numeric()
+                    ->gte('min_salary')
                     ->prefix('৳'),
                 TextInput::make('description')
                     ->default(null),

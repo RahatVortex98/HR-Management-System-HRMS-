@@ -1,35 +1,27 @@
 <?php
 
-namespace App\Filament\Resources\Positions\Tables;
+namespace App\Filament\Resources\LeaveTypes\Tables;
 
 use Filament\Actions\BulkActionGroup;
-use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
+use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
-class PositionsTable
+class LeaveTypesTable
 {
     public static function configure(Table $table): Table
     {
         return $table
             ->columns([
-                TextColumn::make('title')
+                TextColumn::make('name')
                     ->searchable(),
-                TextColumn::make('department.name')
-                    // ->numeric()
-                    ->sortable(),
-                TextColumn::make('min_salary')
+                TextColumn::make('days_per_year')
                     ->numeric()
-                    ->money('BDT')
                     ->sortable(),
-                TextColumn::make('max_salary')
-                    ->numeric()
-                    ->money('BDT')
-                    ->sortable(),
-                TextColumn::make('description')
-                    ->searchable(),
+                IconColumn::make('is_paid')
+                    ->boolean(),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -44,7 +36,6 @@ class PositionsTable
             ])
             ->recordActions([
                 EditAction::make(),
-                DeleteAction::make(),
             ])
             ->toolbarActions([
                 BulkActionGroup::make([

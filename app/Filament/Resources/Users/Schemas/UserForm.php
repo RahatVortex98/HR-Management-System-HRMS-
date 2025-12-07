@@ -7,6 +7,7 @@ use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\ToggleButtons;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
 use Filament\Tables\Columns\Column;
@@ -44,7 +45,7 @@ class UserForm
                             ->relationship('roles', 'name')
                             ->multiple()
                             ->preload()
-                            ->required()
+                            
                             ->searchable(),
                         
                         
@@ -86,7 +87,8 @@ class UserForm
                             // ->default(null),
                         
                         DatePicker::make('hire_date'),
-                        Select::make('employment_type')
+
+                        ToggleButtons::make('employment_type')
                             ->options([
                             'full-time' => 'Full time',
                             'part-time' => 'Part time',
@@ -94,14 +96,18 @@ class UserForm
                             'intern' => 'Intern',
                 ])
                             ->default('full-time')
+                            ->grouped()
+                            ->columnSpanFull()
                             ->required(),
-                        Select::make('status')
+                        ToggleButtons::make('status')
                             ->options([
                             'active' => 'Active',
                             'inactive' => 'Inactive',
                             'on-leave' => 'On leave',
                             'terminated' => 'Terminated',
                 ])
+                            ->columnSpanFull()
+                            ->grouped()
                             ->default('active')
                             ->required(),
                         TextInput::make('salary')
@@ -112,12 +118,18 @@ class UserForm
 
                             ]),
                 
-          
-                TextInput::make('emergency_contact_name')
+                Section::make('Emergency Contact')
+                        ->columns(2)    
+                        ->schema([
+                             TextInput::make('emergency_contact_name')
                     ->default(null),
                 TextInput::make('emergency_contact_phone')
                     ->tel()
                     ->default(null),
-            ]);
+
+                        ])
+                        ]);
+               
+            
     }
 }

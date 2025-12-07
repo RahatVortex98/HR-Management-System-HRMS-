@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Departments\Tables;
 
 use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Tables\Columns\TextColumn;
@@ -16,9 +17,13 @@ class DepartmentsTable
             ->columns([
                 TextColumn::make('name')
                     ->searchable(),
-                TextColumn::make('manager_id')
-                    ->numeric()
-                    ->sortable(),
+                TextColumn::make('manager.name') 
+                    ->label('Manager Name')
+                     ->sortable(),
+                TextColumn::make('employees_count')
+                    ->label('Total Employees')
+                    ->badge()
+                    ->counts('employees'),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -33,6 +38,7 @@ class DepartmentsTable
             ])
             ->recordActions([
                 EditAction::make(),
+                DeleteAction::make(),
             ])
             ->toolbarActions([
                 BulkActionGroup::make([
