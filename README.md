@@ -26,17 +26,17 @@ All panels run inside the same Laravel project using Filament’s multi-panel su
 
 🛠 Technology Stack
 
-            Backend: Laravel 12 (PHP)
+        Backend: Laravel 12 (PHP)
             
-            UI: Filament PHP v4 (Server-Driven)
+        UI: Filament PHP v4 (Server-Driven)
             
-            Frontend: Tailwind CSS, Livewire, Alpine.js (TALL Stack)
+        Frontend: Tailwind CSS, Livewire, Alpine.js (TALL Stack)
             
-            Database: MySQL (Eloquent ORM)
+        Database: MySQL (Eloquent ORM)
             
-            Background Jobs: Laravel Queues (used for payroll processing)
+        Background Jobs: Laravel Queues (used for payroll processing)
     
-            Others: Filament sheild-> https://filamentphp.com/plugins/bezhansalleh-shield
+        Others: Filament sheild-> https://filamentphp.com/plugins/bezhansalleh-shield
 
 🚀 Getting Started:
 
@@ -171,7 +171,9 @@ After Creation Leave Type:
 
     Input: Stats overview
 
-    Result: The user chose the pre-built StatsOverviewWidget. This is specifically designed to show a series of numerical stats cards (like "Total Users," "Revenue Today," etc.) on the      dashboard.
+    Result: The user chose the pre-built StatsOverviewWidget. 
+    This is specifically designed to show a series of numerical 
+    stats cards (like "Total Users," "Revenue Today," etc.) on the dashboard.
 
 📄 License
 This project is open-sourced and available under the MIT License.
