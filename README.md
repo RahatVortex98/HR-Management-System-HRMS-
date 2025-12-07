@@ -122,11 +122,41 @@ Run the setup command (it is interactive and smart):
 
 Login Interface: http://127.0.0.1:8000/admin/login 
 
+
 <img width="1366" height="651" alt="login interface" src="https://github.com/user-attachments/assets/4e8fe9f0-b4c6-4e61-b1fb-e59f5648b77c" />
 
-Generating Model To The Field:
+Generating Model To The Filament(dashboard):
 
     php artisan make:filament-resource model_name --generate
+
+    or,
+
+    php artisan make:filament-resource model_name
+
+Created New Employee By Super Admin:
+
+<img width="1366" height="998" alt="New Employee Created By super admin" src="https://github.com/user-attachments/assets/d373e55f-7dbe-493b-8282-a2aca0c487af" />
+
+After Creation:
+
+<img width="2397" height="651" alt="view interface" src="https://github.com/user-attachments/assets/9e89f594-13c9-4043-a56e-5cf94ed4a033" />
+
+After Creation Department:
+
+<img width="1366" height="651" alt="deparment view" src="https://github.com/user-attachments/assets/5249c8ea-06b8-41d3-94a8-25616bc34b8b" />
+
+
+After Creation Positions:
+
+<img width="1366" height="651" alt="Position view" src="https://github.com/user-attachments/assets/6948d440-fb4d-4495-a32a-0d76c7c8af83" />
+
+Leave Type Creation:
+
+<img width="1366" height="651" alt="leave Type Creation" src="https://github.com/user-attachments/assets/741f208f-0d04-4bf4-8c71-f0d703718aaf" />
+
+After Creation Leave Type:
+
+<img width="1366" height="651" alt="leave Type View" src="https://github.com/user-attachments/assets/f8fe0f5c-3ad2-4123-a207-7850a5ae3023" />
 
 📄 License
 This project is open-sourced and available under the MIT License.
