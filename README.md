@@ -175,6 +175,14 @@ After Creation Leave Type:
     This is specifically designed to show a series of numerical 
     stats cards (like "Total Users," "Revenue Today," etc.) on the dashboard.
 
+Link: https://filamentphp.com/docs/4.x/widgets/stats-overview
+
+After adding widget:
+
+<img width="1366" height="660" alt="after adding widget" src="https://github.com/user-attachments/assets/430c2f06-ba28-439d-ba23-657cb676221d" />
+
+
+
 📄 License
 This project is open-sourced and available under the MIT License.
 
