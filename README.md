@@ -129,6 +129,10 @@ Generating Model To The Filament(dashboard):
 
     php artisan make:filament-resource model_name --generate
 
+    or,
+
+    php artisan make:filament-resource model_name
+
 Created New Employee By Super Admin:
 
 <img width="1366" height="998" alt="New Employee Created By super admin" src="https://github.com/user-attachments/assets/d373e55f-7dbe-493b-8282-a2aca0c487af" />
