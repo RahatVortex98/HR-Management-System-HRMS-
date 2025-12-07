@@ -141,6 +141,15 @@ After Creation:
 
 <img width="2397" height="651" alt="view interface" src="https://github.com/user-attachments/assets/9e89f594-13c9-4043-a56e-5cf94ed4a033" />
 
+After Creation Department:
+
+<img width="1366" height="651" alt="deparment view" src="https://github.com/user-attachments/assets/5249c8ea-06b8-41d3-94a8-25616bc34b8b" />
+
+
+After Creation Positions:
+
+<img width="1366" height="651" alt="Position view" src="https://github.com/user-attachments/assets/6948d440-fb4d-4495-a32a-0d76c7c8af83" />
+
 
 📄 License
 This project is open-sourced and available under the MIT License.
