@@ -201,6 +201,20 @@ Link: https://filamentphp.com/docs/4.x/panel-configuration#the-default-admin-pan
 
     php artisan make:filament-panel hr 
 
+    Super admin should build  Role section and give permission and then create hr manager....
+
+<img width="1366" height="1022" alt="hr made by super admin" src="https://github.com/user-attachments/assets/5ef8760f-9ec8-477a-b963-a0a7afaae1a0" />
+
+
+Login Interface: http://127.0.0.1:8000/hr/login
+
+
+<img width="1358" height="660" alt="Hr Login Interface" src="https://github.com/user-attachments/assets/aaf98c57-1a21-48de-9659-e710300c27a7" />
+
+After Login: 
+
+<img width="1358" height="660" alt="after login" src="https://github.com/user-attachments/assets/e56b4722-c961-448b-84b2-184ed359f15e" />
+
 📄 License
 This project is open-sourced and available under the MIT License.
 
