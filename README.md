@@ -27,15 +27,15 @@ All panels run inside the same Laravel project using Filament’s multi-panel su
 🛠 Technology Stack
 
         Backend: Laravel 12 (PHP)
-        
+            
         UI: Filament PHP v4 (Server-Driven)
-        
+            
         Frontend: Tailwind CSS, Livewire, Alpine.js (TALL Stack)
-        
+            
         Database: MySQL (Eloquent ORM)
-        
+            
         Background Jobs: Laravel Queues (used for payroll processing)
-
+    
         Others: Filament sheild-> https://filamentphp.com/plugins/bezhansalleh-shield
 
 🚀 Getting Started:
@@ -157,6 +157,42 @@ Leave Type Creation:
 After Creation Leave Type:
 
 <img width="1366" height="651" alt="leave Type View" src="https://github.com/user-attachments/assets/f8fe0f5c-3ad2-4123-a207-7850a5ae3023" />
+
+
+
+📊 Filament Widget Generation:
+
+    The command being executed is 
+    php artisan make:filament-widget
+    This is a Filament command used to scaffold the necessary files for adding a customized component, called a Widget,      
+    to your Filament administration panel.  
+
+<img width="894" height="331" alt="widget" src="https://github.com/user-attachments/assets/8781a33a-47a7-4749-9ccd-b031b8de7d32" />
+
+    Input: Stats overview
+
+    Result: The user chose the pre-built StatsOverviewWidget. 
+    This is specifically designed to show a series of numerical 
+    stats cards (like "Total Users," "Revenue Today," etc.) on the dashboard.
+
+Link: https://filamentphp.com/docs/4.x/widgets/stats-overview
+
+After adding widget:
+
+<img width="1366" height="660" alt="after adding widget" src="https://github.com/user-attachments/assets/430c2f06-ba28-439d-ba23-657cb676221d" />
+
+
+#Live updating stats (polling):
+
+    protected ?string $pollingInterval = '60s'; //widgets refresh their data every 60 seconds.
+    
+#Disabling lazy loading:
+
+    protected static bool $isLazy = false;
+
+Updated Interface of Super Admin Dashboard:
+
+<img width="1366" height="660" alt="updated dashboard super-admin" src="https://github.com/user-attachments/assets/2dfef528-1906-4047-9538-d9d388ee087c" />
 
 📄 License
 This project is open-sourced and available under the MIT License.
