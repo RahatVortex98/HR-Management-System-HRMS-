@@ -189,6 +189,11 @@ After adding widget:
 #Disabling lazy loading:
 
     protected static bool $isLazy = false;
+
+Updated Interface of Super Admin Dashboard:
+
+<img width="1366" height="660" alt="updated dashboard super-admin" src="https://github.com/user-attachments/assets/2dfef528-1906-4047-9538-d9d388ee087c" />
+
 📄 License
 This project is open-sourced and available under the MIT License.
 
