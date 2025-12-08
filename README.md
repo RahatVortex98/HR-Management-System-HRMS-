@@ -182,7 +182,13 @@ After adding widget:
 <img width="1366" height="660" alt="after adding widget" src="https://github.com/user-attachments/assets/430c2f06-ba28-439d-ba23-657cb676221d" />
 
 
+#Live updating stats (polling):
 
+    protected ?string $pollingInterval = '60s'; //widgets refresh their data every 60 seconds.
+    
+#Disabling lazy loading:
+
+    protected static bool $isLazy = false;
 📄 License
 This project is open-sourced and available under the MIT License.
 
