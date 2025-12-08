@@ -194,6 +194,13 @@ Updated Interface of Super Admin Dashboard:
 
 <img width="1366" height="660" alt="updated dashboard super-admin" src="https://github.com/user-attachments/assets/2dfef528-1906-4047-9538-d9d388ee087c" />
 
+
+Adding Hr Panel:
+
+Link: https://filamentphp.com/docs/4.x/panel-configuration#the-default-admin-panel
+
+    php artisan make:filament-panel hr 
+
 📄 License
 This project is open-sourced and available under the MIT License.
 
