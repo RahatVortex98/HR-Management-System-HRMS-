@@ -240,6 +240,17 @@ Attendence Creation by Hr Viewed and Updated with Widget:
 
 
 </p>
+
+
+Generating Sheild For leave request:
+
+    php artisan shield:generate --resource=LeaveRequestResource
+
+    Until super admin gave permission HR can't see this section!
+ <p align="center">   
+<img width="48%"  src="https://github.com/user-attachments/assets/df4f989d-170a-41c3-87a1-44d7608603f8" />
+</p>
+    
 📄 License
 This project is open-sourced and available under the MIT License.
 
