@@ -225,8 +225,10 @@ Policies & Permissions for both super-admin and hr:
   <img src="https://github.com/user-attachments/assets/fa83390a-2971-4ab1-add2-04f6ce7eac62" width="48%" />
 </p>
 
+If you want auto-generated forms, do this:
 
-
+    php artisan make:filament-resource Attendence --panel=hr
+    
 📄 License
 This project is open-sourced and available under the MIT License.
 
