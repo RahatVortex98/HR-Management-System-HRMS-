@@ -215,6 +215,16 @@ After Login:
 
 <img width="1358" height="660" alt="after login" src="https://github.com/user-attachments/assets/e56b4722-c961-448b-84b2-184ed359f15e" />
 
+
+Policies & Permissions for both super-admin and hr:
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/093a4f5c-9152-4194-92e5-abf141954837" width="48%" />
+  <img src="https://github.com/user-attachments/assets/fa83390a-2971-4ab1-add2-04f6ce7eac62" width="48%" />
+</p>
+
+
+
 📄 License
 This project is open-sourced and available under the MIT License.
 
