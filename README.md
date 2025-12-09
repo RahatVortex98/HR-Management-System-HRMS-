@@ -251,7 +251,7 @@ Generating Sheild For leave request:
 <img width="48%"  src="https://github.com/user-attachments/assets/df4f989d-170a-41c3-87a1-44d7608603f8" />
 </p>
 
-Generating 2 resources & Sheild for them :
+Generating 2 resources & Sheild for Payroll and PerformanceReview :
 
     php artisan make:filament-resource Payroll --panel=hr
     php artisan make:filament-resource PerformanceReview --panel=hr
@@ -260,6 +260,16 @@ Until Super Admin gave permission->
 
     php artisan shield:generate --resource=PayrollResource
     php artisan shield:generate --resource=PerformanceReviewResource
+
+Payroll Creation and after creation:
+
+ <p align="center">  
+<img width="48%" src="https://github.com/user-attachments/assets/144bb716-bbd7-4fc0-bee5-4ffd1f909bd7" />
+
+<img width="48%"  src="https://github.com/user-attachments/assets/853907e4-75a2-4e8a-9466-857736d88cfb" />
+
+</p>
+
 📄 License
 This project is open-sourced and available under the MIT License.
 
