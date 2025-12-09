@@ -263,6 +263,8 @@ Until Super Admin gave permission->
 
 Payroll Creation and after creation:
 
+Net salary automated ->
+
  <p align="center">  
 <img width="48%" src="https://github.com/user-attachments/assets/144bb716-bbd7-4fc0-bee5-4ffd1f909bd7" />
 
