@@ -218,6 +218,8 @@ After Login:
 
 Policies & Permissions for both super-admin and hr:
 
+    php artisan shield:generate --all
+
 <p align="center">
   <img src="https://github.com/user-attachments/assets/093a4f5c-9152-4194-92e5-abf141954837" width="48%" />
   <img src="https://github.com/user-attachments/assets/fa83390a-2971-4ab1-add2-04f6ce7eac62" width="48%" />
