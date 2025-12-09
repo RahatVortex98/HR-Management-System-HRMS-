@@ -163,7 +163,9 @@ After Creation Leave Type:
 📊 Filament Widget Generation:
 
     The command being executed is 
+    
     php artisan make:filament-widget
+    
     This is a Filament command used to scaffold the necessary files for adding a customized component, called a Widget,      
     to your Filament administration panel.  
 
