@@ -272,6 +272,13 @@ Net salary automated ->
 
 </p>
 
+Payroll Updated Filter:
+ <p align="center">  
+<img width="48%" src="https://github.com/user-attachments/assets/3a6ecd84-376b-4e3d-adf9-690bbb0ca8e8" />
+
+ 
+</p>
+
 📄 License
 This project is open-sourced and available under the MIT License.
 
