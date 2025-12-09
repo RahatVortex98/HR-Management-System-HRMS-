@@ -230,7 +230,16 @@ Policies & Permissions for both super-admin and hr:
 If you want auto-generated forms, do this:
 
     php artisan make:filament-resource Attendence --panel=hr
-    
+
+Attendence Creation by Hr Viewed and Updated with Widget: 
+
+<p align="center">
+<img width="32%"  src="https://github.com/user-attachments/assets/81551cb3-9ec3-44d1-ad84-bf66eda83d00" />
+<img width="32%"  src="https://github.com/user-attachments/assets/f9d1382a-ea20-46e5-ba54-0f224316c544" />
+<img width="32%"  src="https://github.com/user-attachments/assets/4a864bb2-34d4-4419-9d13-3ed46455f992" />
+
+
+</p>
 📄 License
 This project is open-sourced and available under the MIT License.
 
