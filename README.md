@@ -77,6 +77,7 @@ Open in browser:
     | **HR Manager Panel** | `/hr`       |
     | **Employee Panel**   | `/employee` |
 
+🎯 Super Admin Panel Overview->
 
 #Installing the panel builder    
     
@@ -196,6 +197,7 @@ Updated Interface of Super Admin Dashboard:
 
 <img width="1366" height="660" alt="updated dashboard super-admin" src="https://github.com/user-attachments/assets/2dfef528-1906-4047-9538-d9d388ee087c" />
 
+🎯 HR Panel Overview->
 
 Adding Hr Panel:
 
@@ -307,6 +309,75 @@ Updated HR panel:
     <img width="50%"  src="https://github.com/user-attachments/assets/a9632f29-985a-44f7-99ee-14797b15b630" />
 
 </p>
+
+
+🎯 Employee Panel Overview->
+
+#Creating a new panel:
+
+    php artisan make:filament-panel employee
+    
+<img width="40%" height="30%" alt="employee login" src="https://github.com/user-attachments/assets/25a8e050-6107-4149-95a0-f755fd266d79" />
+
+    step1: From super admin will create that employee by giving info
+    step2: Super admin will login to the employee dashboard and gave him access 
+    
+
+for that employeePanelProvider.php must have->
+
+    ->plugins([
+                FilamentShieldPlugin::make(),   // Connect Sheild Correct!
+            ]);
+            
+
+After setup email in .env :
+
+    php artisan config:clear
+    
+
+
+   
+🌟 Password Reset Workflow: 
+
+1. Requesting a Password Reset
+   
+        The user initiates the process by entering their registered email address (r072****@gmail.com) on the login panel's "Forgot Password" screen.
+
+
+<img width="1336" height="647" alt="password reseting" src="https://github.com/user-attachments/assets/c92ed2e7-a7f6-4cd5-bf56-a0b541def612" />
+
+
+2. Email Sending Configuration (Sender)
+   
+
+        The application uses the securely configured Gmail SMTP service (vortexvault.dev@gmail.com) to dispatch the password reset token via an email job.
+
+<img width="1366" height="911" alt="sender" src="https://github.com/user-attachments/assets/7bd5e09b-f8e2-4915-a90f-b82907ffb0e0" />
+
+
+3.Email Received (Receiver)
+
+        Once the queue worker has processed the job, the recipient receives the password reset email, including a unique, time-sensitive link.
+
+<img width="1366" height="1084" alt="receiver" src="https://github.com/user-attachments/assets/54edb3aa-2126-46e5-b011-aeee4388d941" />
+
+
+4. Queue Processing (The Dispatcher)
+
+     php artisan queue:work 
+
+        
+<img width="866" height="53" alt="queue" src="https://github.com/user-attachments/assets/68ed5638-013e-48a9-a655-5eb79a3bbb04" />
+
+5. Final Confirmation
+The process concludes with the user successfully submitting their new password and receiving an on-screen confirmation.
+
+<img width="1358" height="654" alt="reset link" src="https://github.com/user-attachments/assets/823239e3-d32d-4bed-9bee-e232ab6ec76f" />
+
+Password Reseted Successfully:
+
+<img width="1117" height="569" alt="password reseted" src="https://github.com/user-attachments/assets/274da88b-4ba6-4b9e-bd71-14eb44f061f2" />
+
 📄 License
 This project is open-sourced and available under the MIT License.
 
