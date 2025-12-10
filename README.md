@@ -458,6 +458,24 @@ Employee can view whether their leave request has been approved or rejected.
 
 <img src="https://github.com/user-attachments/assets/cf4936d2-eb50-40ff-9da1-4cb992e03b99" width="48%" />
 
+Only logged-in employees can see their payroll and performance review:
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/72fcdac3-f9c2-40e5-9ad9-04ac86496e40" alt="logged in employee see payrolls" width="48%" />
+  <img src="https://github.com/user-attachments/assets/0d67e737-de53-4f46-a4ab-4c67fc3d6216" alt="logged in employee see performance review" width="48%" />
+</p>
+
+Widget For Employee Panel:
+
+        php artisan make:filament-widget
+<p align="center">        
+<img  width="48%" alt="lastRun" src="https://github.com/user-attachments/assets/3323098a-b857-40cf-a1ff-a2d5c6703116" />
+</p>
+
+Employee Panel Updated :
+
+<img width="1358" height="654" alt="employee dashboard updated" src="https://github.com/user-attachments/assets/3f02b1c1-ba2f-462c-9ae0-dd4b330867de" />
+
 
 🌟 Password Reset Workflow: 
 
