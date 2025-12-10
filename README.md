@@ -364,11 +364,101 @@ Both users can see the  same View:
 <img width="48%" src="https://github.com/user-attachments/assets/45ac6950-338b-49ac-864c-d9685aaa462b" />
 <p align="center">
 
-<h2 align="center">Changed to User can see only his attendence</h2>
+<h5 align="center">Changed to User can see only his attendence</h5>
 <p align="center">
     <img width="48%" src="https://github.com/user-attachments/assets/c6231738-9f40-4af6-ae2f-e1318dddc853" />
 
 </p>
+<h5 >Making Custom Page For check in & check out</h5>
+
+        php artisan make:filament-page CheckInOut
+        
+<p align="center">
+<img width="48%" src="https://github.com/user-attachments/assets/7b0d04f2-ab3d-4999-ad2d-9acecca6ed38" />
+</p>   
+
+
+CheckInOut.php(page): need to give access by super admin
+
+            <?php
+
+            namespace App\Filament\Employee\Pages;
+            
+            use BezhanSalleh\FilamentShield\Traits\HasPageShield;
+            use Filament\Pages\Page;
+            
+            class CheckInOut extends Page
+            {
+                use HasPageShield;
+                protected string $view = 'filament.employee.pages.check-in-out';
+            }
+
+<h3>Page Acess by Super admin</h3>
+
+<p align="center">
+<img width="48%" src="https://github.com/user-attachments/assets/2bb7af03-e059-45c2-8c2e-b296f88ed51c" />
+
+</p> 
+
+
+CheckIn CheckOut page:
+
+<p align="center">
+<img width="48%" src="https://github.com/user-attachments/assets/de6763a7-ee57-4cd0-bcd4-6985a7a18d80" />
+</p> 
+
+<h3>CheckIn CheckOut Workflow:</h3>
+
+<div class="grid grid-cols-2 gap-4 mb-4">
+    <!-- First row: 2 images -->
+    <img src="https://github.com/user-attachments/assets/d8aeac24-c206-448c-a2de-94e617966aa4" alt="Check In" class="w-full rounded shadow">
+    <img src="https://github.com/user-attachments/assets/2587e791-96d9-418c-8a56-baf2c807f966" alt="Check Out" class="w-full rounded shadow">
+</div>
+
+<div class="grid grid-cols-1 gap-4">
+    <!-- Second row: 1 image -->
+    <img src="https://github.com/user-attachments/assets/6e16c701-274b-4b25-b7f2-7371197b3acf" alt="Checked Out" class="w-full rounded shadow">
+</div>
+
+config/app.php:
+
+    'timezone' => 'Asia/Dhaka',
+    
+and then,
+
+      php artisan optimize:clear  
+
+📝 Leave Request Workflow
+
+ Employee Creates Leave Request
+Employee fills out the leave form and submits it.
+
+<img src="https://github.com/user-attachments/assets/b624cdd2-c905-4cbf-9411-819b62237e50" width="48%" />
+
+ After Creation
+The leave request now appears in the “Awaiting Approval” list.
+
+<img src="https://github.com/user-attachments/assets/379d0423-5c8f-45f3-808c-8c069ab21f3b" width="48%" />
+
+ HR Checks Awaiting Requests
+HR panel displays all pending leave requests for review.
+
+<img src="https://github.com/user-attachments/assets/fbab68fe-61f0-4a66-8721-bb4ca9d90e24" width="48%" />
+
+ HR Decision: Reject or Approve
+
+Rejected:
+<img src="https://github.com/user-attachments/assets/00569c24-abfd-4294-bf32-a368da68ecb7" width="48%" />
+
+Approved:
+<img src="https://github.com/user-attachments/assets/7ba60f82-f2b0-4a5b-8df2-694e23fb19fd" width="48%" />
+
+ Employee Sees Status
+Employee can view whether their leave request has been approved or rejected.
+
+<img src="https://github.com/user-attachments/assets/cf4936d2-eb50-40ff-9da1-4cb992e03b99" width="48%" />
+
+
 🌟 Password Reset Workflow: 
 
 1. Requesting a Password Reset
