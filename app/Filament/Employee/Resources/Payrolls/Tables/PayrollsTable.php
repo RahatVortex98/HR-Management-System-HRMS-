@@ -3,19 +3,29 @@
 namespace App\Filament\Employee\Resources\Payrolls\Tables;
 
 use Filament\Actions\BulkActionGroup;
-use Filament\Actions\DeleteBulkAction;
-use Filament\Actions\EditAction;
+use Filament\Actions\ViewAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\Auth;
 
 class PayrollsTable
 {
     public static function configure(Table $table): Table
     {
+        // Get the logged-in user once
+        $user = Auth::user();
+
         return $table
+            ->modifyQueryUsing(function (Builder $query) use ($user) {
+                // Filter payrolls for logged-in user
+                if ($user) {
+                    return $query->where('user_id', $user->id);
+                }
+                return $query;
+            })
             ->columns([
-                TextColumn::make('user_id')
-                    ->numeric()
+                TextColumn::make('user.name') // Show user name instead of ID
                     ->sortable(),
                 TextColumn::make('month'),
                 TextColumn::make('year')
@@ -53,11 +63,11 @@ class PayrollsTable
                 //
             ])
             ->recordActions([
-                EditAction::make(),
+                ViewAction::make(),
             ])
             ->toolbarActions([
                 BulkActionGroup::make([
-                    DeleteBulkAction::make(),
+                    // DeleteBulkAction::make(),
                 ]),
             ]);
     }
