@@ -163,7 +163,9 @@ After Creation Leave Type:
 📊 Filament Widget Generation:
 
     The command being executed is 
+    
     php artisan make:filament-widget
+    
     This is a Filament command used to scaffold the necessary files for adding a customized component, called a Widget,      
     to your Filament administration panel.  
 
@@ -194,6 +196,117 @@ Updated Interface of Super Admin Dashboard:
 
 <img width="1366" height="660" alt="updated dashboard super-admin" src="https://github.com/user-attachments/assets/2dfef528-1906-4047-9538-d9d388ee087c" />
 
+
+Adding Hr Panel:
+
+Link: https://filamentphp.com/docs/4.x/panel-configuration#the-default-admin-panel
+
+    php artisan make:filament-panel hr 
+
+    Super admin should build  Role section and give permission and then create hr manager....
+
+<img width="1366" height="1022" alt="hr made by super admin" src="https://github.com/user-attachments/assets/5ef8760f-9ec8-477a-b963-a0a7afaae1a0" />
+
+
+Login Interface: http://127.0.0.1:8000/hr/login
+
+
+<img width="1358" height="660" alt="Hr Login Interface" src="https://github.com/user-attachments/assets/aaf98c57-1a21-48de-9659-e710300c27a7" />
+
+After Login: 
+
+<img width="1358" height="660" alt="after login" src="https://github.com/user-attachments/assets/e56b4722-c961-448b-84b2-184ed359f15e" />
+
+
+Policies & Permissions for both super-admin and hr:
+
+    php artisan shield:generate --all
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/093a4f5c-9152-4194-92e5-abf141954837" width="48%" />
+  <img src="https://github.com/user-attachments/assets/fa83390a-2971-4ab1-add2-04f6ce7eac62" width="48%" />
+</p>
+
+If you want auto-generated forms, do this:
+
+    php artisan make:filament-resource Attendence --panel=hr
+
+Attendence Creation by Hr Viewed and Updated with Widget: 
+
+<p align="center">
+<img width="32%"  src="https://github.com/user-attachments/assets/81551cb3-9ec3-44d1-ad84-bf66eda83d00" />
+<img width="32%"  src="https://github.com/user-attachments/assets/f9d1382a-ea20-46e5-ba54-0f224316c544" />
+<img width="32%"  src="https://github.com/user-attachments/assets/4a864bb2-34d4-4419-9d13-3ed46455f992" />
+
+
+</p>
+
+
+Generating Sheild For leave request:
+
+    php artisan shield:generate --resource=LeaveRequestResource
+
+    Until super admin gave permission HR can't see this section!
+ <p align="center">   
+<img width="48%"  src="https://github.com/user-attachments/assets/df4f989d-170a-41c3-87a1-44d7608603f8" />
+</p>
+
+Generating 2 resources & Sheild for Payroll and PerformanceReview :
+
+    php artisan make:filament-resource Payroll --panel=hr
+    php artisan make:filament-resource PerformanceReview --panel=hr
+
+Until Super Admin gave permission->
+
+    php artisan shield:generate --resource=PayrollResource
+    php artisan shield:generate --resource=PerformanceReviewResource
+
+Payroll Creation and after creation:
+
+Net salary automated ->
+
+ <p align="center">  
+<img width="48%" src="https://github.com/user-attachments/assets/144bb716-bbd7-4fc0-bee5-4ffd1f909bd7" />
+
+<img width="48%"  src="https://github.com/user-attachments/assets/853907e4-75a2-4e8a-9466-857736d88cfb" />
+
+</p>
+
+Payroll Updated Filter:
+
+Filter Combination->
+
+
+        | Month | Year | Employee | Output                              |
+        | ----- | ---- | -------- | ----------------------------------- |
+        | ✔     | ❌    | ❌        | All employees (that month)          |
+        | ✔     | ✔    | ❌        | All employees for that month + year |
+        | ✔     | ✔    | ✔        | Exact payroll for specific employee |
+        | ❌     | ✔    | ✔        | Employee payroll for that year      |
+        | ❌     | ❌    | ✔        | All payroll entries for employee    |
+
+
+ <p align="center">  
+<img width="70%" src="https://github.com/user-attachments/assets/3a6ecd84-376b-4e3d-adf9-690bbb0ca8e8" />
+</p>
+
+Performance review creation and after creation view:
+
+        Overall_rating Auto popuplated.
+
+<p align="center">  
+<img width="48%"  src="https://github.com/user-attachments/assets/237278f6-f9fc-44dc-bf7c-44b43d318e25" />
+
+<img width="48%" src="https://github.com/user-attachments/assets/bcf97761-3073-4471-af08-4ec3fb324b0b" />
+
+</p>
+
+Updated HR panel:
+
+<p align="center">  
+    <img width="50%"  src="https://github.com/user-attachments/assets/a9632f29-985a-44f7-99ee-14797b15b630" />
+
+</p>
 📄 License
 This project is open-sourced and available under the MIT License.
 
