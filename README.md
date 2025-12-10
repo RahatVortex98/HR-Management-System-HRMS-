@@ -77,6 +77,7 @@ Open in browser:
     | **HR Manager Panel** | `/hr`       |
     | **Employee Panel**   | `/employee` |
 
+🎯 Super Admin Panel Overview->
 
 #Installing the panel builder    
     
@@ -196,6 +197,7 @@ Updated Interface of Super Admin Dashboard:
 
 <img width="1366" height="660" alt="updated dashboard super-admin" src="https://github.com/user-attachments/assets/2dfef528-1906-4047-9538-d9d388ee087c" />
 
+🎯 HR Panel Overview->
 
 Adding Hr Panel:
 
@@ -306,6 +308,204 @@ Updated HR panel:
 <p align="center">  
     <img width="50%"  src="https://github.com/user-attachments/assets/a9632f29-985a-44f7-99ee-14797b15b630" />
 
+</p>
+
+
+🎯 Employee Panel Overview->
+
+#Creating a new panel:
+
+    php artisan make:filament-panel employee
+ <p align="center">  
+<img width="40%" height="30%" alt="employee login" src="https://github.com/user-attachments/assets/25a8e050-6107-4149-95a0-f755fd266d79" />
+</p>
+
+    step1: From super admin will create that employee by giving info
+    step2: Super admin will login to the employee dashboard and gave him access 
+    
+
+for that employeePanelProvider.php must have->
+
+    ->plugins([
+                FilamentShieldPlugin::make(),   // Connect Sheild Correct!
+            ]);
+            
+Making resources for Employee panel:
+
+        php artisan make:filament-resource Attendence --panel=employee
+        
+        php artisan make:filament-resource LeaveRequest --panel=employee
+
+        php artisan make:filament-resource Payroll --panel=employee  
+
+        php artisan make:filament-resource PerformanceReview --panel=employee
+        
+Generating shield on those resources:
+
+Until Super Admin gave permission->
+
+        php artisan shield:generate --all
+<p align="center">  
+
+<img width="50%"  src="https://github.com/user-attachments/assets/c76c1cc1-f1a1-4a10-8ecd-1d18b2c05822" />
+</p>
+
+Given Permission by Super-admin:
+<p align="center"> 
+    <img width="50%" src="https://github.com/user-attachments/assets/7cd35f73-d2f7-4956-b634-91bb4b22a8fa" />
+
+</p>
+
+Both users can see the  same View:
+
+<p align="center">
+    <img width="48%"src="https://github.com/user-attachments/assets/1427d7f6-0bae-4b21-bf16-b2c0d4ecd9ea" />
+
+<img width="48%" src="https://github.com/user-attachments/assets/45ac6950-338b-49ac-864c-d9685aaa462b" />
+<p align="center">
+
+<h5 align="center">Changed to User can see only his attendence</h5>
+<p align="center">
+    <img width="48%" src="https://github.com/user-attachments/assets/c6231738-9f40-4af6-ae2f-e1318dddc853" />
+
+</p>
+<h5 >Making Custom Page For check in & check out</h5>
+
+        php artisan make:filament-page CheckInOut
+        
+<p align="center">
+<img width="48%" src="https://github.com/user-attachments/assets/7b0d04f2-ab3d-4999-ad2d-9acecca6ed38" />
+</p>   
+
+
+CheckInOut.php(page): need to give access by super admin
+
+            <?php
+
+            namespace App\Filament\Employee\Pages;
+            
+            use BezhanSalleh\FilamentShield\Traits\HasPageShield;
+            use Filament\Pages\Page;
+            
+            class CheckInOut extends Page
+            {
+                use HasPageShield;
+                protected string $view = 'filament.employee.pages.check-in-out';
+            }
+
+<h3>Page Acess by Super admin</h3>
+
+<p align="center">
+<img width="48%" src="https://github.com/user-attachments/assets/2bb7af03-e059-45c2-8c2e-b296f88ed51c" />
+
+</p> 
+
+
+CheckIn CheckOut page:
+
+<p align="center">
+<img width="48%" src="https://github.com/user-attachments/assets/de6763a7-ee57-4cd0-bcd4-6985a7a18d80" />
+</p> 
+
+<h3>CheckIn CheckOut Workflow:</h3>
+
+<div class="grid grid-cols-2 gap-4 mb-4">
+    <!-- First row: 2 images -->
+    <img src="https://github.com/user-attachments/assets/d8aeac24-c206-448c-a2de-94e617966aa4" alt="Check In" class="w-full rounded shadow">
+    <img src="https://github.com/user-attachments/assets/2587e791-96d9-418c-8a56-baf2c807f966" alt="Check Out" class="w-full rounded shadow">
+</div>
+
+<div class="grid grid-cols-1 gap-4">
+    <!-- Second row: 1 image -->
+    <img src="https://github.com/user-attachments/assets/6e16c701-274b-4b25-b7f2-7371197b3acf" alt="Checked Out" class="w-full rounded shadow">
+</div>
+
+config/app.php:
+
+    'timezone' => 'Asia/Dhaka',
+    
+and then,
+
+      php artisan optimize:clear  
+
+📝 Leave Request Workflow
+
+ Employee Creates Leave Request
+Employee fills out the leave form and submits it.
+
+<img src="https://github.com/user-attachments/assets/b624cdd2-c905-4cbf-9411-819b62237e50" width="48%" />
+
+ After Creation
+The leave request now appears in the “Awaiting Approval” list.
+
+<img src="https://github.com/user-attachments/assets/379d0423-5c8f-45f3-808c-8c069ab21f3b" width="48%" />
+
+ HR Checks Awaiting Requests
+HR panel displays all pending leave requests for review.
+
+<img src="https://github.com/user-attachments/assets/fbab68fe-61f0-4a66-8721-bb4ca9d90e24" width="48%" />
+
+ HR Decision: Reject or Approve
+
+Rejected:
+<img src="https://github.com/user-attachments/assets/00569c24-abfd-4294-bf32-a368da68ecb7" width="48%" />
+
+Approved:
+<img src="https://github.com/user-attachments/assets/7ba60f82-f2b0-4a5b-8df2-694e23fb19fd" width="48%" />
+
+ Employee Sees Status
+Employee can view whether their leave request has been approved or rejected.
+
+<img src="https://github.com/user-attachments/assets/cf4936d2-eb50-40ff-9da1-4cb992e03b99" width="48%" />
+
+
+🌟 Password Reset Workflow: 
+
+1. Requesting a Password Reset
+   
+        The user initiates the process by entering their registered email address (r072****@gmail.com)
+        on the login panel's "Forgot Password" screen.
+
+<p align="center">  
+<img width="48%" src="https://github.com/user-attachments/assets/c92ed2e7-a7f6-4cd5-bf56-a0b541def612" />
+</p>
+
+2. Email Sending Configuration (Sender)
+   
+
+        The application uses the securely configured Gmail SMTP service (vorte*****.dev@gmail.com)
+        to dispatch the password reset token via an email job.
+<p align="center">  
+<img width="48%" src="https://github.com/user-attachments/assets/7bd5e09b-f8e2-4915-a90f-b82907ffb0e0" />
+</p>
+
+3.Email Received (Receiver)
+
+        Once the queue worker has processed the job, the recipient receives the password reset email,
+        including a unique, time-sensitive link.
+<p align="center">  
+<img width="48%" src="https://github.com/user-attachments/assets/54edb3aa-2126-46e5-b011-aeee4388d941" />
+</p>
+
+4. Queue Processing (The Dispatcher)
+
+       php artisan queue:work 
+
+<p align="center">     
+<img width="48%" src="https://github.com/user-attachments/assets/68ed5638-013e-48a9-a655-5eb79a3bbb04" />
+</p>
+5. Final Confirmation
+
+       The process concludes with the user successfully submitting their 
+       ew password and receiving an on-screen confirmation.
+   
+<p align="center">  
+<img width="48%" src="https://github.com/user-attachments/assets/823239e3-d32d-4bed-9bee-e232ab6ec76f" />
+</p>
+Password Reseted Successfully:
+
+<p align="center">  
+<img width="48%" src="https://github.com/user-attachments/assets/274da88b-4ba6-4b9e-bd71-14eb44f061f2" />
 </p>
 📄 License
 This project is open-sourced and available under the MIT License.
