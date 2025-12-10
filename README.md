@@ -471,6 +471,12 @@ Widget For Employee Panel:
 <p align="center">        
 <img  width="48%" alt="lastRun" src="https://github.com/user-attachments/assets/3323098a-b857-40cf-a1ff-a2d5c6703116" />
 </p>
+
+Employee Panel Updated :
+
+<img width="1358" height="654" alt="employee dashboard updated" src="https://github.com/user-attachments/assets/3f02b1c1-ba2f-462c-9ae0-dd4b330867de" />
+
+
 🌟 Password Reset Workflow: 
 
 1. Requesting a Password Reset
