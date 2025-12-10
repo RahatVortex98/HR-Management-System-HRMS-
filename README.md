@@ -288,10 +288,18 @@ Filter Combination->
 
  <p align="center">  
 <img width="70%" src="https://github.com/user-attachments/assets/3a6ecd84-376b-4e3d-adf9-690bbb0ca8e8" />
-
- 
 </p>
 
+Performance review creation and after creation view:
+
+        Overall_rating Auto popuplated.
+
+<p align="center">  
+<img width="48%"  src="https://github.com/user-attachments/assets/237278f6-f9fc-44dc-bf7c-44b43d318e25" />
+
+<img width="48%" src="https://github.com/user-attachments/assets/bcf97761-3073-4471-af08-4ec3fb324b0b" />
+
+</p>
 📄 License
 This project is open-sourced and available under the MIT License.
 
