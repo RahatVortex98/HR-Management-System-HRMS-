@@ -36,6 +36,10 @@ class StatOverview extends StatsOverviewWidget
             )
             ->description('Process This Month')
             ->descriptionIcon('heroicon-o-banknotes'),
+            Stat::make('Pending Leave Requests', LeaveRequest::where('status','pending')->count())
+                ->description('Awating Approval')
+                ->descriptionIcon('heroicon-o-calendar-days')
+                ->color('warning'),
         ];
     }
 }

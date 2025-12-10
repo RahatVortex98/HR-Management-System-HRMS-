@@ -1,0 +1,62 @@
+<?php
+
+namespace App\Filament\Employee\Resources\Attendences\Tables;
+
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\EditAction;
+use Filament\Facades\Filament;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Table;
+
+class AttendencesTable
+{
+    public static function configure(Table $table): Table
+    {
+        return $table
+            ->modifyQueryUsing(function ($query) {
+                // Get the currently logged-in employee
+                $userId = Filament::auth()->id();
+
+                // Show only records for this user
+                return $query->where('user_id', $userId);
+            })
+            ->columns([
+                TextColumn::make('user.name')
+                    ->sortable(),
+
+                TextColumn::make('date')
+                    ->date()
+                    ->sortable(),
+
+                TextColumn::make('check_in')
+                    ->time()
+                    ->sortable(),
+
+                TextColumn::make('check_out')
+                    ->time()
+                    ->sortable(),
+
+                TextColumn::make('status'),
+
+                TextColumn::make('created_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+
+                TextColumn::make('updated_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+            ])
+            ->filters([])
+            ->recordActions([
+                EditAction::make(),
+            ])
+            ->toolbarActions([
+                BulkActionGroup::make([
+                    // DeleteBulkAction::make(),
+                ]),
+            ]);
+    }
+}

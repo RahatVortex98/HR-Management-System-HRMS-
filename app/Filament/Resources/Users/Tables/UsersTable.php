@@ -19,22 +19,35 @@ class UsersTable
                 TextColumn::make('email')
                     ->label('Email address')
                     ->searchable(),
-                TextColumn::make('email_verified_at')
-                    ->dateTime()
+                TextColumn::make('roles.name')
+                    ->label('Role')
+                    // 1. Convert the text output to a colored badge
+                    ->badge() 
+                    ->searchable()
+                    // 2. Define the color based on the role name
+                    ->color(fn (string $state): string => match ($state) {
+                        'employee' => 'info',     // Blue/Cyan color (Filament's default 'info')
+                        'hr_manager' => 'warning', // Yellow/Amber color (Filament's default 'warning')
+                        'super_admin' => 'danger',  // Red color (Filament's default 'danger')
+                        default => 'gray',        // Neutral color for any other role
+                    }),
+                
+                // TextColumn::make('email_verified_at')
+                //     ->dateTime()
+                //     ->sortable(),
+                // TextColumn::make('created_at')
+                //     ->dateTime()
+                //     ->sortable()
+                //     ->toggleable(isToggledHiddenByDefault: true),
+                // TextColumn::make('updated_at')
+                //     ->dateTime()
+                //     ->sortable()
+                //     ->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('department.name')
+                    
                     ->sortable(),
-                TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                TextColumn::make('department_id')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('position_id')
-                    ->numeric()
+                TextColumn::make('position.title')
+                    
                     ->sortable(),
                 TextColumn::make('employee_id')
                     ->searchable(),
@@ -46,7 +59,8 @@ class UsersTable
                 TextColumn::make('hire_date')
                     ->date()
                     ->sortable(),
-                TextColumn::make('emplopyment_type'),
+                TextColumn::make('emplopyment_type')
+                    ->badge(),
                 TextColumn::make('status'),
                 TextColumn::make('salary')
                     ->numeric()

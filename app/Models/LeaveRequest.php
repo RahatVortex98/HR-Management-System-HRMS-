@@ -6,18 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class LeaveRequest extends Model
 {
-    protected $fillable = [
-        'user_id',
-        'approved_by',
-        'leave_type_id',
-        'start_time',
-        'end_time',
-        'days',
-        'reason',
-        'status',
-        'approved_at',
-        'rejection_reason',
-    ];
+  protected $fillable = [
+    'user_id',
+    'leave_type_id',
+    'days',
+    'reason',
+    'approved_by',
+    'status',
+    'approved_at',
+    'rejection_reason',
+];
 
     protected $casts = [
         'start_date'=>'date',
@@ -33,5 +31,10 @@ class LeaveRequest extends Model
     public function approver(){
         return $this->belongsTo(User::class,'approved_by');
     }
+    public static function getEloquentQuery()
+{
+    return parent::getEloquentQuery()->with(['user', 'leaveType', 'approver']);
+}
+
 
 }
