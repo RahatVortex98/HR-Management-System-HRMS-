@@ -18,31 +18,26 @@ use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
-
-// Correct namespace
-use BezhanSalleh\FilamentShield\Facades\FilamentShield;
 use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
-
-class AdminPanelProvider extends PanelProvider
+class HrPanelProvider extends PanelProvider
 {
     public function panel(Panel $panel): Panel
     {
         return $panel
-            ->default()
-            ->id('admin')
-            ->path('admin')
+            ->id('hr')
+            ->path('hr')
             ->login()
-            ->brandLogo(asset('images/vortex-logo.svg'))
+            ->brandLogo(asset('images/hr.svg'))
             ->favicon(asset('images/vortex-logo.svg'))
             ->colors([
-                'primary' => Color::Amber,
+                'primary' => Color::Indigo,
             ])
-            ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')
-            ->discoverPages(in: app_path('Filament/Pages'), for: 'App\Filament\Pages')
+            ->discoverResources(in: app_path('Filament/Hr/Resources'), for: 'App\Filament\Hr\Resources')
+            ->discoverPages(in: app_path('Filament/Hr/Pages'), for: 'App\Filament\Hr\Pages')
             ->pages([
                 Dashboard::class,
             ])
-            ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\Filament\Widgets')
+            ->discoverWidgets(in: app_path('Filament/Hr/Widgets'), for: 'App\Filament\Hr\Widgets')
             ->widgets([
                 AccountWidget::class,
                 FilamentInfoWidget::class,
@@ -61,7 +56,7 @@ class AdminPanelProvider extends PanelProvider
             ->authMiddleware([
                 Authenticate::class,
             ])
-            ->plugins([
+             ->plugins([
                 FilamentShieldPlugin::make(),   // Connect Sheild Correct!
             ]);
     }
