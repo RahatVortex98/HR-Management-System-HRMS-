@@ -287,7 +287,7 @@ Filter Combination->
 
 
  <p align="center">  
-<img width="48%" src="https://github.com/user-attachments/assets/3a6ecd84-376b-4e3d-adf9-690bbb0ca8e8" />
+<img width="70%" src="https://github.com/user-attachments/assets/3a6ecd84-376b-4e3d-adf9-690bbb0ca8e8" />
 
  
 </p>
