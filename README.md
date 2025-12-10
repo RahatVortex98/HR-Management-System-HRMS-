@@ -300,6 +300,13 @@ Performance review creation and after creation view:
 <img width="48%" src="https://github.com/user-attachments/assets/bcf97761-3073-4471-af08-4ec3fb324b0b" />
 
 </p>
+
+Updated HR panel:
+
+<p align="center">  
+    <img width="50%"  src="https://github.com/user-attachments/assets/a9632f29-985a-44f7-99ee-14797b15b630" />
+
+</p>
 📄 License
 This project is open-sourced and available under the MIT License.
 
