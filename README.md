@@ -330,14 +330,45 @@ for that employeePanelProvider.php must have->
                 FilamentShieldPlugin::make(),   // Connect Sheild Correct!
             ]);
             
+Making resources for Employee panel:
 
-After setup email in .env :
+        php artisan make:filament-resource Attendence --panel=employee
+        
+        php artisan make:filament-resource LeaveRequest --panel=employee
 
-    php artisan config:clear
-    
+        php artisan make:filament-resource Payroll --panel=employee  
 
+        php artisan make:filament-resource PerformanceReview --panel=employee
+        
+Generating shield on those resources:
 
-   
+Until Super Admin gave permission->
+
+        php artisan shield:generate --all
+<p align="center">  
+
+<img width="50%"  src="https://github.com/user-attachments/assets/c76c1cc1-f1a1-4a10-8ecd-1d18b2c05822" />
+</p>
+
+Given Permission by Super-admin:
+<p align="center"> 
+    <img width="50%" src="https://github.com/user-attachments/assets/7cd35f73-d2f7-4956-b634-91bb4b22a8fa" />
+
+</p>
+
+Both users can see the  same View:
+
+<p align="center">
+    <img width="48%"src="https://github.com/user-attachments/assets/1427d7f6-0bae-4b21-bf16-b2c0d4ecd9ea" />
+
+<img width="48%" src="https://github.com/user-attachments/assets/45ac6950-338b-49ac-864c-d9685aaa462b" />
+<p align="center">
+
+<h2 align="center">Changed to User can see only his attendence</h2>
+<p align="center">
+    <img width="48%" src="https://github.com/user-attachments/assets/c6231738-9f40-4af6-ae2f-e1318dddc853" />
+
+</p>
 🌟 Password Reset Workflow: 
 
 1. Requesting a Password Reset
