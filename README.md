@@ -341,7 +341,8 @@ After setup email in .env :
 
 1. Requesting a Password Reset
    
-        The user initiates the process by entering their registered email address (r072****@gmail.com) on the login panel's "Forgot Password" screen.
+        The user initiates the process by entering their registered email address (r072****@gmail.com)
+        on the login panel's "Forgot Password" screen.
 
 
 <img width="1336" height="647" alt="password reseting" src="https://github.com/user-attachments/assets/c92ed2e7-a7f6-4cd5-bf56-a0b541def612" />
@@ -350,27 +351,31 @@ After setup email in .env :
 2. Email Sending Configuration (Sender)
    
 
-        The application uses the securely configured Gmail SMTP service (vortexvault.dev@gmail.com) to dispatch the password reset token via an email job.
+        The application uses the securely configured Gmail SMTP service (vorte*****.dev@gmail.com)
+        to dispatch the password reset token via an email job.
 
 <img width="1366" height="911" alt="sender" src="https://github.com/user-attachments/assets/7bd5e09b-f8e2-4915-a90f-b82907ffb0e0" />
 
 
 3.Email Received (Receiver)
 
-        Once the queue worker has processed the job, the recipient receives the password reset email, including a unique, time-sensitive link.
+        Once the queue worker has processed the job, the recipient receives the password reset email,
+        including a unique, time-sensitive link.
 
 <img width="1366" height="1084" alt="receiver" src="https://github.com/user-attachments/assets/54edb3aa-2126-46e5-b011-aeee4388d941" />
 
 
 4. Queue Processing (The Dispatcher)
 
-     php artisan queue:work 
+       php artisan queue:work 
 
         
 <img width="866" height="53" alt="queue" src="https://github.com/user-attachments/assets/68ed5638-013e-48a9-a655-5eb79a3bbb04" />
 
 5. Final Confirmation
-The process concludes with the user successfully submitting their new password and receiving an on-screen confirmation.
+
+       The process concludes with the user successfully submitting their 
+       ew password and receiving an on-screen confirmation.
 
 <img width="1358" height="654" alt="reset link" src="https://github.com/user-attachments/assets/823239e3-d32d-4bed-9bee-e232ab6ec76f" />
 
